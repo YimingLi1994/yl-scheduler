@@ -50,5 +50,5 @@ def fetchcode(pathbase, dest, folderName):
             shutil.rmtree(pathbase)
             continue
     if try_count == retry_num:
-        raise RuntimeError('Cannot fetch code from storage')
+        raise RuntimeError('Cannot fetch code from storage, the shellstr is {}'.format(shelllst))
     return pathbase
