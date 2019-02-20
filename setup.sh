@@ -21,3 +21,5 @@ pip3 install jsonpath-ng
 pip3 install pandas-gbq
 pip3 install setuptools
 pip3 install google-cloud-pubsub
+
+pip3 install selenium
