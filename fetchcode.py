@@ -24,8 +24,8 @@ def fetchcode(pathbase, dest, folderName):
     pathbase = os.path.join(pathbase,jobfolder ,str(uuid.uuid4()))
     targetfolder = os.path.join(pathbase, folderName)
     node = platform.node()
-    if node in ('LAPTOP-MRA1E0VJ','yl-shana','yl-louise'):
-        shellstr = 'gsutil -m rsync -d -r gs://yl-scheduler/{0}/{1} {2}'.format(jobfolder, folderName, targetfolder)
+    if node in ('LAPTOP-MRA1E0VJ','yiming1','yiming2'):
+        shellstr = 'gsutil -m rsync -d -r gs://yiming-scheduler/{0}/{1} {2}'.format(jobfolder, folderName, targetfolder)
     else:
         shellstr = 'gsutil -m rsync -d -r gs://dp-scheduler-test/{0}/{1} {2}'.format(jobfolder, folderName,
                                                                                      targetfolder)

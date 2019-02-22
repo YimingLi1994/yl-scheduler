@@ -21,30 +21,18 @@ class Myscheduler:
         # self.readconnectioninfo = ["104.198.219.159", 3306, "yli003", "yli003", "schedulerDB"]  # for reading data
         # self.writeconnectioninfo = ["104.198.219.159", 3306, "yli003", "yli003", "schedulerDB"]  # for writing data
 
-        if nodeinfo == 'yl-shana': #< ------- main scheduler name
+        if nodeinfo == 'yiming1': #< ------- main scheduler name
             self.envinfo += (0,)
-            pathbase = '/home/yl-shana/jobs'  #< -------- chmod 777 if permission error staging running code.
+            pathbase = '/home/yiming/jobs'  #< -------- chmod 777 if permission error staging running code.
             pythonpath = '/usr/bin/python3'   #< ------- default python path
-            self.readconnectioninfo = ["35.224.121.101", 3306, "yiming", "yiming", "schedulerDB"]  # for reading data
-            self.writeconnectioninfo = ["35.224.121.101", 3306, "yiming", "yiming", "schedulerDB"]  # for writing data
-        elif nodeinfo == 'yl-louise': #< ------- bkp scheduler name
+            self.readconnectioninfo = ["130.211.206.49", 3306, "yiming", "yiming123", "schedulerDB"]  # for reading data
+            self.writeconnectioninfo = ["130.211.206.49", 3306, "yiming", "yiming123", "schedulerDB"]  # for writing data
+        elif nodeinfo == 'yiming2': #< ------- bkp scheduler name
             self.envinfo += (1,)
-            pathbase = '/home/yl-louise/jobs'
+            pathbase = '/home/yiming/jobs'
             pythonpath = '/usr/bin/python3'
-            self.readconnectioninfo = ["35.224.121.101", 3306, "yiming", "yiming", "schedulerDB"]  # for reading data
-            self.writeconnectioninfo = ["104.197.118.95", 3306, "yiming", "yiming", "schedulerDB"]  # for writing data
-        elif nodeinfo == 'LAPTOP-MRA1E0VJ':
-            self.envinfo += (0,)
-            pathbase = 'C:\\Users\liyim\Desktop\dp_scheduler'
-            pythonpath = 'C:\\Users\\liyim\\Anaconda3\\python.exe'
-            # self.readconnectioninfo = ["35.224.121.101", 3306, "yiming", "yiming", "schedulerDB"]  # for reading data
-            # self.writeconnectioninfo = ["35.224.121.101", 3306, "yiming", "yiming", "schedulerDB"]  # for writing data
-        elif nodeinfo == 'data-upload-1':
-            self.envinfo += (0,)
-            pathbase = '/home/jianwei.xiao/jobs'
-            pythonpath = '/usr/bin/python3'
-            self.readconnectioninfo = ["127.0.0.1", 3306, "root", "2212", "schedulerDB"]  # for reading data
-            self.writeconnectioninfo = ["127.0.0.1", 3306, "root", "2212", "schedulerDB"]  # for writing data
+            self.readconnectioninfo = ["130.211.206.49", 3306, "yiming", "yiming123", "schedulerDB"]  # for reading data
+            self.writeconnectioninfo = ["146.148.79.143", 3306, "yiming", "yiming123", "schedulerDB"]  # for writing data
         else:
             raise NameError('Unknown host')
         self.envinfo += (pathbase,)
